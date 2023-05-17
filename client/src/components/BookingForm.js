@@ -20,7 +20,7 @@ const BookingForm = ({ addBooking }) => {
         postBooking(formData).then(() => {
             addBooking(data);
         })
-
+        
         setFormData({
             name: "",
             email: "",
