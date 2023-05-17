@@ -1,5 +1,5 @@
-import HotelContainer from "./container/HotelContainer.js"
 import './App.css';
+import BookingContainer from './container/BookingContainer';
 
 function App() {
   return (

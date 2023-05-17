@@ -1,9 +1,7 @@
 import {useState, useEffect} from 'react';
 import BookingList from '../components/BookingList'
 import BookingForm from '../components/BookingForm'
-import getBooking from '../components/BookingService'
-
-import './App.css'
+import {getBookings} from '../components/BookingService'
 
 const BookingContainer = () => {
 
@@ -20,8 +18,8 @@ const BookingContainer = () => {
     }
 
     const removeBooking = (id) => {
-        const bookingToKeep = booking.filter(booking => booking._id !== id)
-        setBookings(bookingToKeep);
+        const bookingsToKeep = bookings.filter(booking => booking._id !== id)
+        setBookings(bookingsToKeep);
     }
 
 
