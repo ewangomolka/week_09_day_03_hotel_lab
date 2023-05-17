@@ -14,6 +14,10 @@ const BookingItem = ({booking, removeBooking}) => {
         <div>
             <h1>{booking.name}</h1>
             <p>{booking.email}</p>
+            <label htmlFor="checked">Checked in?</label>
+            <input 
+            type="checkbox" 
+            checked={isChecked} />
             <button onClick={handleDelete}></button>
         </div>
      );
