@@ -3,16 +3,26 @@ import { postBooking } from './BookingService';
 
 const BookingForm = ({ addBooking }) => {
 
+    const [isChecked, setChecked] = useState(false)
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        checked: false,
+        checked: isChecked,
     })
 
     const onChange = (e) => {
         const newFormData = Object.assign({}, formData);
         newFormData[e.target.name] = e.target.value;
         setFormData(newFormData);
+    }
+
+    const onCheckboxChecked = (e) => {
+        if (formData.checked == isChecked){
+            let newState = {...formData}
+            newState.checked = !isChecked
+            setFormData(newState)
+        }
+        setChecked(!isChecked)
     }
 
     const onSubmit = (e) => {
@@ -39,7 +49,7 @@ const BookingForm = ({ addBooking }) => {
                     type="text"
                     id='name'
                     name='name'
-                    value={formData.name} />
+                    value={formData.name} required/>
                 </div>
 
                 <div className="formWrap">
@@ -49,14 +59,14 @@ const BookingForm = ({ addBooking }) => {
                     type="text"
                     id='email'
                     name='email'
-                    value={formData.email} />
+                    value={formData.email} required/>
                 </div>
 
                 <div className="formWrap">
                 <label htmlFor="checked">Checked In?</label>
                     <input 
                     type="checkbox"
-                    onChange={onChange}
+                    onChange={onCheckboxChecked}
                     id='checked'
                     name='checked'
                     value={formData.checked} />
