@@ -14,7 +14,7 @@ MongoClient.connect('mongodb://127.0.0.1:27017', { useUnifiedTopology: true })
         const db = client.db('hotel');
         const guestsCollection = db.collection('guests');
         const guestsRouter = createRouter(guestsCollection);
-        app.use('./api/guests', guestsRouter);
+        app.use('/api/guests', guestsRouter);
     })
     .catch(console.err);
 
