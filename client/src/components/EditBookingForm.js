@@ -5,8 +5,8 @@ const EditBookingForm = ({handleBookingUpdate, editBooking, handleEditClicked}) 
     
     const [isChecked, setChecked] = useState(false)
     const [formData, setFormData] = useState({
-        species: editBooking.name,
-        location: editBooking.email,
+        name: editBooking.name,
+        email: editBooking.email,
         checked: isChecked,
     })
 
