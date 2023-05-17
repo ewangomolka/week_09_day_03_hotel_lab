@@ -1,0 +1,45 @@
+#bookings-form {
+    width: 300px;
+
+}
+input {
+    margin: 5px 5px;
+    border: solid 1px gray;
+    border-radius: 2px;
+    /* width: 200px; */
+}
+
+#save {
+    margin-top: 15px;
+    width: 60px;
+    margin-bottom: 0px;
+}
+
+#checked {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.formWrap {
+    
+}
+
+label {
+    display: inline-block;
+    width: 65px;
+}
+
+.checked-in {
+    width: 100px;
+}
+
+form {
+    border-radius: 20px;
+    border: solid grey;
+    background-color: lightgrey;
+    padding: 20px
+}
+
+form h1 {
+    margin-top: 0px;
+}

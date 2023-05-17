@@ -1,0 +1,23 @@
+.edit-button,
+.delete-button {
+    margin: 0px 5px;
+}
+
+.delete-button {
+    color: red;
+    font-weight: bold;
+
+}
+
+.booking-item-container {
+    border-radius: 20px;
+    border: solid lightgrey;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.booking-item-container h1 {
+    margin-top: 0px;
+
+}
