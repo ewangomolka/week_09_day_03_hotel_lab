@@ -1,17 +1,18 @@
 import {useState, useEffect} from 'react';
 import BookingList from '../components/BookingList'
 import BookingForm from '../components/BookingForm'
-import {getBookings} from '../components/BookingService'
+import {getBookings, updateBooking} from '../components/BookingService'
 
 const BookingContainer = () => {
 
     const [bookings, setBookings] = useState([]);
+    const [editBooking, setEditBooking] = useState(null)
 
     useEffect(() => {
       getBookings().then((allBookings) => {
         setBookings(allBookings);
       })
-    }, [])
+    }, [bookings])
 
     const addBooking = (booking) => {
         setBookings([...bookings, booking]);
@@ -22,10 +23,20 @@ const BookingContainer = () => {
         setBookings(bookingsToKeep);
     }
 
+    const handleEditClicked = (booking) => {
+      setEditBooking(booking)
+    }
+
+    const handleBookingUpdate = (id, booking) => {
+      updateBooking(id, booking)
+    }
+
 
     return ( 
         <div>
-            <BookingList bookings={bookings} removeBooking={removeBooking} />
+            <BookingList bookings={bookings} removeBooking={removeBooking} handleEditClicked={handleEditClicked}
+            editBooking={editBooking}
+            handleBookingUpdate={handleBookingUpdate}/>
             <BookingForm addBooking={addBooking}/>
         </div>
      );

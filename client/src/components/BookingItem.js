@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {deleteBooking} from "./BookingService";
 
-const BookingItem = ({booking, removeBooking}) => {
+const BookingItem = ({booking, removeBooking, handleEditClicked}) => {
 
     const handleDelete = () =>{
         deleteBooking(booking._id)
@@ -10,8 +10,8 @@ const BookingItem = ({booking, removeBooking}) => {
         })
     }
     
-    const handleCheck = () =>{
-        
+    const handleEdit = () =>{
+        handleEditClicked(booking)
     }
 
     return ( 
@@ -19,8 +19,8 @@ const BookingItem = ({booking, removeBooking}) => {
         <div>
             <h1>{booking.name}</h1>
             <p>{booking.email}</p>
-            <button onClick={handleCheck}>Check in</button>
-            {booking.checked === true ? <p>Guest Checked in</p> : null}
+            {booking.checked === true ? <p>Guest Checked in</p> : <p>Awaiting Check In</p>}
+            <button onClick={handleEdit}>Edit Booking</button>
             <button onClick={handleDelete}>Delete</button>
         </div>
      );
