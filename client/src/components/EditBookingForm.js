@@ -7,7 +7,7 @@ const EditBookingForm = ({handleBookingUpdate, editBooking, handleEditClicked}) 
     const [formData, setFormData] = useState({
         species: editBooking.name,
         location: editBooking.email,
-        checked: editBooking.checked,
+        checked: isChecked,
     })
 
     const onChange = (e) =>{
