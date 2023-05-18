@@ -1,0 +1,50 @@
+.booking-container-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    row-gap: 30px;
+    margin-top: 30px;
+    /* align-items: center; */
+
+}
+
+.booking-list-container {
+}
+
+.booking-form-container {
+    padding-right: 40px;
+    border: none;
+    border-radius: 20px;
+    /* border-right: solid; */
+
+
+
+}
+
+header {
+    background-color: #235605;
+    box-sizing: border-box;
+    padding-top: 35px;
+    padding-bottom: 1px;
+}
+.hotel-name {
+    /* font-size: 50px; */
+    margin-bottom: 40px;
+    margin-top: 0px;
+    /* color: #938651; */
+    font-size: 60px;
+  font-family: Georgia;
+  font-style: italic;
+  font-weight: 700;
+  position: relative;
+  
+  background: linear-gradient(178deg, #f7e8cb 0%,#fce494 38%,#7d5b36 76%,#5b5228 100%); /* W3C */
+
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+
+img {
+    width: 300px;
+    margin: 25px;
+    border-radius: 20px
+}
